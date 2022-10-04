@@ -43,6 +43,6 @@ export function deleteTodo(todoId: string, jwtToken: string): Promise<string> {
     return todosAccess.deleteTodo(todoId, userId);
 }
 
-// export function generateUploadUrl(todoId: string): Promise<string> {
-//     return todosAccess.generateUploadUrl(todoId);
-// }
+export function generateUploadUrl(todoId: string): Promise<string> {
+    return todosAccess.generateUploadUrl(todoId);
+}
