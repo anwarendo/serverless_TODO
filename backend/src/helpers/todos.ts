@@ -2,12 +2,12 @@ import { TodosAccess } from './todosAcess'
 // import { AttachmentUtils } from './attachmentUtils';
 import { TodoItem } from '../models/TodoItem'
 import { CreateTodoRequest } from '../requests/CreateTodoRequest'
-// import { UpdateTodoRequest } from '../requests/UpdateTodoRequest'
+import { UpdateTodoRequest } from '../requests/UpdateTodoRequest'
 // import { createLogger } from '../utils/logger'
 import * as uuid from 'uuid'
 // import * as createError from 'http-errors'
 import {parseUserId} from "../auth/utils";
-// import {TodoUpdate} from "../models/TodoUpdate";
+import {TodoUpdate} from "../models/TodoUpdate";
 
 // TODO: Implement businessLogic
 
@@ -33,10 +33,10 @@ export function createTodo(createTodoRequest: CreateTodoRequest, jwtToken: strin
     });
 }
 
-// export function updateTodo(updateTodoRequest: UpdateTodoRequest, todoId: string, jwtToken: string): Promise<TodoUpdate> {
-//     const userId = parseUserId(jwtToken);
-//     return todosAccess.updateTodo(updateTodoRequest, todoId, userId);
-// }
+export function updateTodo(updateTodoRequest: UpdateTodoRequest, todoId: string, jwtToken: string): Promise<TodoUpdate> {
+    const userId = parseUserId(jwtToken);
+    return todosAccess.updateTodo(updateTodoRequest, todoId, userId);
+}
 
 export function deleteTodo(todoId: string, jwtToken: string): Promise<string> {
     const userId = parseUserId(jwtToken);
