@@ -13,9 +13,9 @@ import {parseUserId} from "../auth/utils";
 
 const todosAccess = new TodosAccess();
 
-export async function getAllTodo(jwtToken: string): Promise<TodoItem[]> {
+export async function getAllTodos(jwtToken: string): Promise<TodoItem[]> {
     const userId = parseUserId(jwtToken);
-    return todosAccess.getAllTodo(userId);
+    return todosAccess.getAllTodos(userId);
 }
 
 export function createTodo(createTodoRequest: CreateTodoRequest, jwtToken: string): Promise<TodoItem> {

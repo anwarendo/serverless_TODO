@@ -22,7 +22,7 @@ export class TodosAccess {
         private readonly s3BucketName = process.env.S3_BUCKET_NAME) {
     }
 
-    async getAllTodo(userId: string): Promise<TodoItem[]> {
+    async getAllTodos(userId: string): Promise<TodoItem[]> {
         console.log("Getting all todo");
 
         const params = {
