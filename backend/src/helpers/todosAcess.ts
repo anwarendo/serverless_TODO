@@ -22,7 +22,7 @@ export class TodosAccess {
         private readonly s3BucketName = process.env.S3_BUCKET_NAME) {
     }
 
-    async getAllToDo(userId: string): Promise<TodoItem[]> {
+    async getAllTodo(userId: string): Promise<TodoItem[]> {
         console.log("Getting all todo");
 
         const params = {
@@ -43,7 +43,7 @@ export class TodosAccess {
         return items as TodoItem[];
     }
 
-    async createToDo(todoItem: TodoItem): Promise<TodoItem> {
+    async createTodo(todoItem: TodoItem): Promise<TodoItem> {
         console.log("Creating new todo");
 
         const params = {
@@ -57,7 +57,7 @@ export class TodosAccess {
         return todoItem as TodoItem;
     }
 
-    async updateToDo(todoUpdate: TodoUpdate, todoId: string, userId: string): Promise<TodoUpdate> {
+    async updateTodo(todoUpdate: TodoUpdate, todoId: string, userId: string): Promise<TodoUpdate> {
         console.log("Updating todo");
 
         const params = {
@@ -87,7 +87,7 @@ export class TodosAccess {
         return attributes as TodoUpdate;
     }
 
-    async deleteToDo(todoId: string, userId: string): Promise<string> {
+    async deleteTodo(todoId: string, userId: string): Promise<string> {
         console.log("Deleting todo");
 
         const params = {
