@@ -1,6 +1,6 @@
 # Serverless TODO
 
-To implement this project, you need to implement a simple TODO application using AWS Lambda and Serverless framework. Search for all comments starting with the `TODO:` in the code to find the placeholders that you need to implement.
+This is a final project for the technical side of a course about cloud-development on AWS prepared by ALX-T via Udacity. It is a simple Todo app to demonstrate the effectiveness of serverless compared to the normal cloud approach like using kubernetes. I personally got it more costeffective since we pay for the functions we use (our customers use by invoking indirectly:)).
 
 # Functionality of the application
 
